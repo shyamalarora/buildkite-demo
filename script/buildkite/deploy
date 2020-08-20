@@ -12,9 +12,7 @@ manifest="$(mktemp)"
 echo '--- :kubernetes: Shipping'
 pwd && whoami
 envsubst < ./k8s/deployment.yml > "${manifest}"
-kubectl get nodes
-
-#apply -f "${manifest}"
+kubectl apply -f "${manifest}"
 
 echo '--- :zzz: Waiting for deployment'
 kubectl wait --for condition=available --timeout=300s -f "${manifest}"
