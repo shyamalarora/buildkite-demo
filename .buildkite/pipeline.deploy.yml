@@ -3,3 +3,4 @@ steps:
     command: script/buildkite/deploy
     concurrency: 1
     concurrency_group: deploy/tutorial
+    queue: nutrien-sanbox-au
