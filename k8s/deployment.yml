@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tutorial
+  name: buildkite-demo
   labels:
-    app: tutorial
+    app: buildkite-demo
 spec:
   # TODO: replace with a value that fits your application
   replicas: 3
   selector:
     matchLabels:
-      app: tutorial
+      app: buildkite-demo
   template:
     metadata:
       labels:
-        app: tutorial
+        app: buildkite-demo
     spec:
       containers:
         - name: app
